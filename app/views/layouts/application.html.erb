@@ -12,14 +12,9 @@
     <!-- CDN TAILWIND CSS-->
     <%= stylesheet_pack_tag 'application', media: 'all' %>
 
-    <%= favicon_link_tag asset_path('logo_v1_bg.png') %>
+    <%= favicon_link_tag asset_path('logo_v1_bg.png'), size:"32x32" %>
   </head>
-44
   <body class="bg-gray-200">
-  <div class="container">
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-       </div>
     <%= yield %>
   </body>
 </html>
