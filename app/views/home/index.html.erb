@@ -1,6 +1,7 @@
 
 <% if user_signed_in? %>
 <%= render "home/logged/logged_in" %>
+<% @title="Banque d'exercice" %>
 <% else %>
 <%= render "home/logged/logged_up" %>
 <% end %>
