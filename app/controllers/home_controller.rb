@@ -1,10 +1,7 @@
 class HomeController < ApplicationController
-before_action :authenticate_user!
 
 before_action :find_levels
 before_action :find_materials
-  #before_filter :find_user_content_access
-
 
   def index
     @materials = Material.all.order('created_at desc')

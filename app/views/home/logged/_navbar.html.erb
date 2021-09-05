@@ -17,6 +17,8 @@
          <%= link_to 'Espace Professeur', admin_index_path, class:'' %>
       </div>
       <div class="flex mr-48">
-         <%= link_to 'Déconnecter', root_path, class:'' %>
+         <%= link_to 'Déconnecter',destroy_user_session_path, method: :delete  %>
+        
+         
       </div>
     </header>
