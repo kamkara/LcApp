@@ -1,0 +1,19 @@
+    <header class="flex justify-between items-center bg-white p-2 font-bold">
+      <div class="flex md:ml-32">
+        <p class="font-bold text-blue-500 text-3xl"><span class="bg-blue-500 text-white">LnC</span><span>lass</span></p>
+      </div>    
+      
+      <div class="">
+         <%= link_to 'Accueil',root_path, class:'' %>
+      </div>
+      <div class="justify-end items-center">
+         <%= link_to ' Créer Cours',root_path, class:'' %>
+      </div>
+      <div class="flex">
+         <%= link_to 'Espace Professeur', admin_index_path, class:'' %>
+      </div>
+      <div class="flex mr-48">
+         <%= link_to 'Déconnecter', root_path, class:'' %>
+      </div>
+    </header>
+
