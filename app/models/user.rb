@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :materials
   has_many :levels  
   has_many :cityAreas
-  #has_many :messages
+  #has_many :exercices
 
      ################## VALIDATES  ###############
   validates :first_name, :last_name, :full_name, :matricule, :email, :contact, :role,  presence: true
