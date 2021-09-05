@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @city_area.title %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @city_area.slug %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @city_area.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_city_area_path(@city_area) %> |
+<%= link_to 'Back', city_areas_path %>

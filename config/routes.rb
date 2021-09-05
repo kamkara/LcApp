@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :courses
+  resources :city_areas
+  resources :levels
+  resources :materials
   get 'admin/index'
   get 'admin/create'
   get 'admin/dashboard'
