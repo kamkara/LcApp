@@ -16,17 +16,8 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :slug %>
-    <%= form.text_field :slug %>
-  </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions mt-2">
+    <%= form.submit "Add City", class:"bg-blue-400 p-2 border-2 border-rounded-md font-bold" %>
   </div>
 <% end %>

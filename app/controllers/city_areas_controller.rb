@@ -22,7 +22,7 @@ class CityAreasController < ApplicationController
 
   # POST /city_areas or /city_areas.json
   def create
-    @city_area = CityArea.new(city_area_params)
+    @city_area = current_user.cityAreas.build(city_area_params)
 
     respond_to do |format|
       if @city_area.save
@@ -60,7 +60,7 @@ class CityAreasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_city_area
-      @city_area = CityArea.find(params[:id])
+      @city_area = CityArea.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
