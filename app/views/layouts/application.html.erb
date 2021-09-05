@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LcApp</title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,14 +11,10 @@
 
     <!-- CDN TAILWIND CSS-->
     <%= stylesheet_pack_tag 'application', media: 'all' %>
-    
-  </head>
 
+    <%= favicon_link_tag asset_path('logo_v1_bg.png'), size:"32x32" %>
+  </head>
   <body class="bg-gray-200">
-  <div class="container">
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-       </div>
     <%= yield %>
   </body>
 </html>
