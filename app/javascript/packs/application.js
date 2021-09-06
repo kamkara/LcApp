@@ -16,7 +16,9 @@ import "stylesheets/application";
 //= require popper
 //= require bootstrap
 
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")
