@@ -3,22 +3,21 @@
 <!-- boucle for matiere items/!-->
 <div class="container-fluid">
   <!-- Icon/!-->
-  <div class="h-8 bg-red-200 rounded-md">
+  <div class="h-8 bg-red-300 rounded-md">
     <div class="row">
-      <div class="col-2">
+      <div class="w-full">
         <p class="ml-1">
-          <span class="relative inline-flex  h-5 w-3 bg-white animate"></span>
+          <span class="relative inline-flex h-5 w-3 bg-white animate"></span>
+        <span class="ml-2">Fil Matières </span>
         </p>
       </div>
-      <div class="col-8">
-        <p class="font-semi-bold -ml-2">Fil Matières </p>
-      </div>
+      
     </div>  
   </div>
   <div class="sm:flex sm:space-x-4">
     <ul class="leading-relaxed pt-2">
       <% @materials.each do |m| %>
-      <li class="text-lg font-bold">
+      <li class="text-md font-semibold">
         <%= link_to m.title, m , class: "hover:no-underline hover:text-black text-black no-underline" %>
         </li>
       <% end %>
