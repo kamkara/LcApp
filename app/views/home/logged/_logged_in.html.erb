@@ -1,20 +1,20 @@
-<!-- component -->
-<div class="flex h-screen ">
   <div class="flex-1 flex flex-col overflow-hidden">
     <!-- navbar-->
-      <%= render "home/shared-feed/navbar" %>
-    <div class="flex h-full mr-72 md:ml-24">
-        <nav class="flex w-72 h-full ">
-          <div class="w-full flex mx-auto px-6 py-8">
-            <%= render "home/shared-feed/sidebar" %> 
-          </div>
-        </nav>
-        <main class="flex flex-col w-full bg-white overflow-x-hidden overflow-y-auto mb-14">
-          <div class="flex w-full mx-auto px-6 py-8">
-          <% @title='Accueil' %>
-            <%= render "home/shared-feed/feed" %>
-          </div>
-        </main>
-    </div>
+    <%= render "home/shared-feed/navbar" %>
   </div>
+<div class="grid md:grid-flow-col ">
+  <div class=" md:row-span-2 ">
+    <nav class=" ">
+      <div class="p-1">
+        <%= render "home/shared-feed/sidebar" %> 
+      </div>
+    </nav>
+  </div>
+
+  <div class="md:row-span-4 mt-8">
+    <% @title='Accueil' %>
+    <%= render "home/shared-feed/feed" %>
+  </div>
+  
 </div>
+

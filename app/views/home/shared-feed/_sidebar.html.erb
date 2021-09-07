@@ -1,27 +1,19 @@
-<div class="w-full h-full flex  justify-center text-gray-900 text-xl border border-gray-900 ">
-  
-<!-- boucle for matiere items/!-->
-<div class="container-fluid">
-  <!-- Icon/!-->
-  <div class="h-8 bg-red-300 rounded-md">
-    <div class="row">
-      <div class="w-full">
-        <p class="ml-1">
-          <span class="relative inline-flex h-5 w-3 bg-white animate"></span>
+  <!-- boucle for matiere items/!-->
+  <div class="container md:ml-44">
+    <!-- Icon/!-->
+    <div class="hidden md:block h-8 w-32 bg-red-300 rounded-md">
+      <p class="ml-1">
+        <span class="relative inline-flex h-5 w-3 bg-white animate"></span>
         <span class="ml-2">Fil Matières </span>
-        </p>
-      </div>
-      
-    </div>  
+      </p>  
+    </div>
+    <div class="flex space-x-4">
+      <p class="md:w-32 md:h-32 flex-col ">
+        <% @materials.each do |m| %>
+        <span class="md:block text-md font-semibold bg-white border-double border-4 border-light-blue-500  md:border-none md:border-0 p-2">
+          <%= link_to m.title, m , class: "hover:no-underline space-x-4 hover:text-black text-black no-underline" %>
+          </span>
+        <% end %>
+      </p>
+    </div>
   </div>
-  <div class="sm:flex sm:space-x-4">
-    <ul class="leading-relaxed pt-2">
-      <% @materials.each do |m| %>
-      <li class="text-md font-semibold">
-        <%= link_to m.title, m , class: "hover:no-underline hover:text-black text-black no-underline" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-</div>
