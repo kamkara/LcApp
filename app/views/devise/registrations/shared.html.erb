@@ -1,0 +1,41 @@
+
+                       <div class='w-full md:w-full px-3 mb-6'>
+                           <%= f.text_field :school_name, class:"w-full text-base py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400", placeholder:"l'ecole de frequentation" %>
+                        </div>
+                       
+                        <!-- component -->
+                        <div class="w-full px-3 mb-2">
+                        <div class="control border-b border-gray-500 py-3 px-5 text-sm font-semibold mr-3">je suis en série</div>
+                        <label class="flex radio p-1 cursor-pointer">
+                            <%= f.radio_button :serie_bac, :A1, class:"my-auto transform scale-125"%>
+                            <div class="title px-2">en A1</div>
+                        </label>
+
+                        <label class="flex radio p-1 cursor-pointer">
+                            <%= f.radio_button :serie_bac, :A2, class:"my-auto transform scale-125"%>
+                            <div class="title px-2"> en A2</div>
+                        </label>
+
+                        <label class="flex radio p-1 cursor-pointer">
+                            <%= f.radio_button :serie_bac, :D, class:"my-auto transform scale-125"%>
+                            <div class="title px-2">en D</div>
+                        </label>
+
+                        </div>
+                        <div class="w-full px-3 mb-2">
+                            <div class=" border-b border-gray-500 py-3 px-5 text-sm font-semibold mr-3">Es-tu Nouveau candidat</div>
+                                <label class="flex radio p-1 cursor-pointer">
+                                    <%= f.radio_button :status_bac, :Non_Boublant, class:"my-auto transform scale-125"%>
+                                    <div class="title px-2">1ere année au BAC</div>
+                                </label>
+
+                                <label class="flex radio p-1 cursor-pointer">
+                                    <%= f.radio_button :status_bac, :Doublant, class:"my-auto transform scale-125"%>
+                                    <div class="title px-2"> 2e Fois au BAC</div>
+                                </label>
+                                <label class="flex radio p-1 cursor-pointer">
+                                    <%= f.radio_button :status_bac, :Doublant_3x, class:"my-auto transform scale-125"%>
+                                    <div class="title px-2">+ 2e Fois au BAC</div>
+                                </label>
+                            </div>
+                        </div>

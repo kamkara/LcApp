@@ -13,11 +13,20 @@ class User < ApplicationRecord
   has_many :cityAreas
   #has_many :exercices
 
-     ################## VALIDATES  ###############
-  validates :first_name, :last_name, :full_name, :matricule, :email, :contact, :role,  presence: true
-  validates :full_name,  length: { minimum:5 }
-  validates :contact, uniqueness: true, length: { minimum:10 }
-  validates :matricule, uniqueness: true, length: { minimum:9 }
+################## VALIDATES  ###############
+
+     ################## VALIDATES SIGN UP ###############
+     validates :first_name, :last_name, :full_name, :matricule, :email, :contact, :role,  presence: true
+     validates :full_name,  length: { minimum:5 }
+     validates :contact, uniqueness: true, length: { minimum:10 }
+     validates :matricule, uniqueness: true, length: { minimum:9 }
+     
+     ################## VALIDATES SIGN UP COMPLET ###############
+     def name
+      if self.role == "student"
+       validates :school_name, :serie_bac, :status_bac, presence:true      
+      end
+     end
 
  ############# customize fields###############"" 
 def email
@@ -44,6 +53,9 @@ end
     full_name_changed?
   end
 
+
+
+  #################### Sign in section #############
   def logged
     @logged || self.matricule || self.email
   end
