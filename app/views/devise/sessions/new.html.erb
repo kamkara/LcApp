@@ -12,14 +12,14 @@
   <!-- Layout  -->
   <div class="bg-white w-96 shadow-xl rounded p-2">
     <h1 class="text-3xl font-medium">Se Connecter</h1>
-    <p class="text-sm">Se connecter pour accéder aux contenus. <br>
-     Tu dois etre déja inscrit(e) au par-avant.
-     </p>
+    <p class="text-sm">Se connecter pour accéder aux contenus ou 
+     <%= link_to  "S'Inscrire rapidement", new_user_registration_path, class:"text-blue-700 font-medium" %> 
+     </p> 
     <div class="space-y-5 mt-2">
-      <%= f.text_field :logged, class:"w-full h-12 border border-gray-800 rounded px-3",placeholder:"Matricule ou Email"  %>
-     <div class="w-full flex items-center  border border-gray-800 rounded px-3 my-2">
-        <%= f.password_field :password ,class:"w-4/5 h-12", placeholder:"Mot de passe ou Contact" %>
-        <span class="text-blue-700 hover:bg-blue-400 rounded-full px-3 ">afficher</span>
+      <%= f.text_field :logged, class:"w-full h-12 border border-gray-800 rounded px-3",placeholder:"Matricule ou Code Id"  %>
+     <div class="w-full flex items-center  border border-gray-800 rounded my-2">
+        <%= f.password_field :password ,class:"w-full h-12", placeholder:"N° WhatsApp ou Mot de passe" %>
+        
       </div>
 
       <div class="">
