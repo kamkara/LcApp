@@ -1,7 +1,6 @@
+<% @title="Connexion" %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
 <!-- component -->
-
 <div class="h-screen bg-white flex flex-col space-y-10 justify-center items-center">
  
   <!-- lnclass logo -->
@@ -26,9 +25,10 @@
                   <a href="#!" class="font-medium text-blue-700 hover:bg-blue-300 rounded-full p-2">Mot de passe oublié ?</a>
       </div>
 
-      <button class="text-center w-full bg-blue-700 rounded-full text-white py-3 font-medium">Se Connecter</button>
 
     </div>
+    <%= f.submit "Se Connecter", disable_with: 'Connexion encours...', class:"text-center w-full mx-2 bg-blue-700 rounded-md text-white text-xl  py-3 font-medium" %>
+     
   </div>
 
   <!-- Footer -->

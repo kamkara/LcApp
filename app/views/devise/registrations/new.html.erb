@@ -1,22 +1,21 @@
+<% @title="Inscription" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   
 <!-- component -->
 <div class="w-full mx-auto max-w-3xl p-6 ">
- 
-        <!-- title message -->
-        <div class="bg-white max-w mx-auto rounded-2xl  border-b-4 border-red-500 overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-105 cursor-pointer">
-            <div class="h-20 bg-red-500 flex items-center ">
-                <h1 class="text-white ml-4 border-2 py-2 px-4 rounded-full">Juste 2min </h1>
-                <p class=" text-white text-base ml-4 uppercase"> 
-                    Inscription au prépa
-                </p>
-            </div>
+    <!-- title message -->
+    <div class="bg-white max-w mx-auto rounded-2xl  border-b-4 border-blue-500 overflow-hidden ">
+        <div class="h-20 bg-blue-500 flex items-center ">
+            <h1 class="text-white ml-4 border-2 py-2 px-4 rounded-full">Juste 2min </h1>
+            <p class=" text-white text-base ml-4 uppercase"> 
+              Inscription au prépa
+            </p>
+        </div>
         <div class="py-6 px-6 text-lg tracking-wide text-center">
             <div class="">
                 <div class='flex flex-wrap -mx-3 mb-6'>
-
                   <!-- Info personnel-->
                   <div class="personal w-full  pt-4">
                         <h2 class="text-2xl text-gray-900 border-b  border-gray-400">Remplir les informations personnelles:</h2>
@@ -98,7 +97,7 @@
 
                     <!-- <hr > -->
         <div class="flex justify-center px-5 mb-2 text-sm ">
-        <%= f.submit "Terminer Inscription", disable_with: 'Submiting...', class:"border bg-red-500 font-semibold text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline" %>
+        <%= f.submit "Terminer Inscription", disable_with: 'Submiting...', class:"border bg-blue-500  font-semibold text-white text-xl rounded-md p-3 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline" %>
 
         </div>
                 </div>
