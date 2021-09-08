@@ -1,0 +1,31 @@
+<header class="flex justify-between items-center bg-white p-2 mb-4 font-bold">
+      <div class="flex md:ml-32"> 
+        <%= link_to root_path, class:"" do %>
+          <p class="font-bold text-blue-500 text-3xl">
+            <span class="bg-blue-500 text-white">Ln</span><span>Class</span>
+          </p>
+        <% end %>
+      </div>    
+      
+      <div class="-ml-52">
+         <%= link_to root_path, class:'' do %>
+            <span class=""> <i class="fa fa-home"></i>Accueil</span>
+         <% end %>
+      </div>
+      <div class="-mr-52">
+         <%= link_to new_course_path, class:'' do %>
+            <span class=""><i class="fa fa-plus-circle"></i>  Créer Cours</span>  
+         <% end %>
+      </div>
+      <div class="flex -mr-52">
+         <%= link_to admin_index_path, class:'' do %>
+            <span class=""><i class="fas fa-users"></i> Espace Professeur</span> 
+         <% end %>
+         
+      </div>
+      <div class="flex mr-48">
+         <%= link_to destroy_user_session_path, method: :delete do %>
+          <span><i class="fas fa-sign-out-alt"></i> Déconnecter</span>
+         <% end %>
+      </div>
+    </header>
