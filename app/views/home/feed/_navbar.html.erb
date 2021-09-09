@@ -16,15 +16,13 @@
       </button>
 
       <div class="collapse navbar-collapse text-black font-bold" id="LnNavbar">
-        <div class="navbar-nav me-auto mb-2 mb-sm-0 ">
-          <div class="nav-item ">
-            
-            <%= link_to root_path, class:'nav-link active  md:ml-12 text-black' do %>
+        
+          <div class="nav-item  ">
+            <%= link_to root_path, class:'nav-link text-black active  md:ml-12' do %>
              <span class=""> <i class="fa fa-home" aria-current="page"></i>Accueil</span>
             <% end %>
           </div>
-        </div>
-          <div class="nav-item">
+          <div class="nav-item md:ml-48">
             <%= link_to new_course_path, class:'nav-link text-black font-bold' do %>
               <span class=""><i class="fa fa-plus-circle"></i>  Créer Cours</span>  
             <% end %>
@@ -36,35 +34,13 @@
           </div>
           
 
-          <div class="nav-item">
-            <%= link_to destroy_user_session_path, method: :delete do %>
-              <span><i class="fas fa-sign-out-alt"></i> Déconnecter</span>
-            <% end %>
+         <div class="nav-item">
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <span><i class="fas fa-sign-out-alt"></i> Déconnecter</span>
+          <% end %>
           </div>
+        </div>
       </div>
-    </div>
-  </nav>
-
+    </nav>
   </div>
-
-
-<header class="flex justify-between items-center bg-white p-2 mb-4 font-bold">
-      
-      <div class="-ml-52">
-         
-      </div>
-      <div class="-mr-52">
-         
-      </div>
-      <div class="flex -mr-52">
-         
-         
-      </div>
-      <div class="flex mr-48">
-         <%= link_to destroy_user_session_path, method: :delete do %>
-          <span><i class="fas fa-sign-out-alt"></i> Déconnecter</span>
-         <% end %>
-      </div>
-    </header>
-
 </main>
