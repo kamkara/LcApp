@@ -1,6 +1,8 @@
 
 <% if user_signed_in? %>
     <%= render "home/logged/logged_in" %>
+ <%= render partial: 'home/shared/javascript' %>
+       
 <% else %>
     <%= render "home/logged/logged_up" %>
 <% end %>
