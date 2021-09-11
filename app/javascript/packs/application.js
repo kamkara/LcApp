@@ -10,7 +10,7 @@ import "channels"
 
 // import style on App.js
 import "stylesheets/application";
-
+const images = require.context('../images', true)
 
 //= require jquery3
 //= require popper
