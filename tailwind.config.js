@@ -10,9 +10,7 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    backgroundImage: {
-      'bgImg': "url("<%= image_tag "img-bachelier-2021.jpeg" %>")",
-    },
+    
     screens: {
       sm: '640px',
       md: '768px',
