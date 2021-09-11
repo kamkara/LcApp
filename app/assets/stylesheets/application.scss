@@ -16,3 +16,8 @@
 @import "bootstrap";
 // application.scss
 @import "./actiontext.scss";
+
+#bg-img{
+    background: url( asset-path('img-bachelier-2021.jpeg') ) no-repeat;
+  background-size: 100% 100%;
+}

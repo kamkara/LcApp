@@ -1,13 +1,13 @@
 <%= render "home/shared/styles" %>
 <% @title="Accueil" %>
 <!-- component -->
-<header class="min-h-screen bg-white ">
+<header class="min-h-screen bg-white bg-gradient-to-r from-green-200 to-blue-500 " id="bg-img">
     <!-- Navigaiton Bar -->
     <nav class="flex items-center py-8 px-14 justify-between">
         <div class="flex items-center">
             <h1 class="text-xl md:text-2xl font-bold text-gray-700 ">LNCLASS EDUCATION</h1>
         </div>
-        <div class="md:flex items-center space-x-3 py-2 px-2 md:px-4 bg-blue-500 text-white rounded-lg  transition-all duration-400 transform hover:text-white hover:scale-105 cursor-pointer hover:shadow-lg">
+        <div class="md:flex items-center space-x-3 py-2 px-2 md:px-4 bg-green-500 text-white rounded-lg  transition-all duration-400 transform hover:text-white hover:scale-105 cursor-pointer hover:shadow-lg">
             <%= link_to 'Se Connecter', new_user_session_path, class:"font-semibold" %>    
         </div>
     </nav>
