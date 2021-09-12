@@ -1,18 +1,14 @@
 <% @title="Inscription" %>
-
+<div class="container mt-8 ">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  
-  
     <!-- title message -->
-    <div class="bg-white max-w  mx-2 rounded-2xl border-b-4 border-blue-500 overflow-hidden ">
-        <div class="h-16 bg-blue-500 flex items-center ">
-            <p class="text-white ml-2 border-2 py-12 px-1 rounded-full">LNCLASS</p>
-            <p class=" text-white text-semibold  mx-1 "> 
-              Inscription élèves Tle A1, A2 et D
-            </p>
+    <div class="bg-white rounded-2xl border-b-4 border-blue-500 overflow-hidden ">
+        <div class="h-16 bg-blue-500 flex items-center text-white">
+            <p class="ml-2 border-2 py-12 px-1 rounded-full">LNCLASS</p>
+            <p class="text-semibold  mx-1 "> Inscription élèves Tle A1, A2 et D </p>
         </div>
-        <div class="py-2 px-1">
+        <div class="py-2 px-1 ">
             <div class='flex mb-6'>
                 <!-- Info personnel-->
                 <div class="personal w-full pt-4">
@@ -25,9 +21,10 @@
                             <%= f.text_field :last_name, class:"w-full text-base py-2 border-1  border-gray-400 rounded-md focus:outline-none focus:border-green-400", placeholder:" Prénom ..." %> 
                         </div>
                     </div>
-                    <div class='w-full md:w-full px-3 mb-6'>
-                        <%= f.text_field :city, class:"w-full text-base py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400", placeholder:"la ville de frequentation" %>
+                    <div class='w-full  px-3 mb-6 select'>
+                        <%= f.select :city,  @cityAreas.map { |c| [c.title, c.id] }, label: true, class:"w-full text-base py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400", placeholder:"la ville de frequentation" %>
                     </div>
+                    
 
                     <div class="w-full flex items-center justify-between my-4">
                         <div class='w-1/2 mx-2'>
@@ -57,5 +54,7 @@
                 </div>
             </div>
         </div>
+       
     </div>
 <% end %>
+</div>
