@@ -10,12 +10,12 @@ class User < ApplicationRecord
   has_many :courses
   has_many :materials
   has_many :levels  
-  belongs_to :cityArea
+  has_many :cityareas
 
 ################## VALIDATES  ###############
 
      ################## VALIDATES SIGN UP ###############
-     validates :first_name, :last_name, :full_name, :matricule, :email, :contact, :role,  presence: true
+     validates :first_name, :last_name, :full_name, :matricule, :email, :city, :contact, :role,  presence: true
      validates :full_name,  length: { minimum:5 }
      validates :contact, uniqueness: true, length: { minimum:10 }
      validates :matricule, uniqueness: true, length: { minimum:9 }
@@ -66,6 +66,6 @@ end
       elsif conditions.has_key?(:matricule) || conditions.has_key?(:email)
         where(conditions.to_h).first
       end
-    end
+  end
 
 end
