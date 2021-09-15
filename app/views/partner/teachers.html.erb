@@ -4,9 +4,9 @@
   <%= render "devise/shared/error_messages", resource: resource %>
     <!-- title message -->
     <div class="bg-white rounded-2xl border-b-4 border-blue-500 overflow-hidden ">
-        <div class="h-16 bg-blue-500 flex items-center text-white font-semibold">
-            <p class="ml-2 border-2 px-1 rounded-full">LNCLASS</p>
-            <p class="text-semibold  mx-1 "> Inscription élèves Tle A1, A2 et D </p>
+        <div class="h-16 bg-blue-500 flex items-center text-white">
+            <p class="ml-2 border-2  px-1 rounded-full">LNCLASS</p>
+            <p class="text-semibold  mx-1 "> Professeur Partenaire </p> 
         </div>
         <div class="py-2 px-1 ">
             <div class='flex mb-6'>
@@ -22,19 +22,19 @@
                         </div>
                     </div>
                     <div class='w-full flex  items-center justify-between '>
-                 <%= f.select :city,  @cityAreas.map { |c| [c.title, c.id] }, label: true, class:" w-full block w-full mt-1", placeholder:"la ville de frequentation" %>
+                    <%= f.select :city,  @cityAreas.map { |c| [c.title, c.id] }, label: true, class:" w-full block w-full mt-1", placeholder:"la ville de frequentation" %>
                     </div>
                     
 
                     <div class="w-full flex items-center justify-between my-4">
                         <div class='w-1/2 mx-2'>
-                            <%= f.text_field :matricule, class:"w-full text-base py-2 border-1  border-gray-400 rounded-md focus:outline-none focus:border-green-400", placeholder:" N° matricule ..." %>
+                            <%= f.text_field :contact, class:"w-full text-base py-2 border-1  border-gray-400 rounded-md focus:outline-none focus:border-green-400", placeholder:" N° tel (10 chiffres) ..." %>
                         </div>
                         <div class='w-1/2'>
-                            <%= f.text_field :contact, class:"w-full text-base py-2 border-1  border-gray-400 rounded-md focus:outline-none focus:border-green-400", placeholder:" N° tel(10 chiffres) ..." %>
+                            <%= f.text_field :matricule, class:"w-full text-base py-2 border-1  border-gray-400 rounded-md focus:outline-none focus:border-green-400", placeholder:" Mot de passe (9 caracteres)..." %>
                         </div>
                     </div>
-                    <%= f.hidden_field :role, value:"Student" %>
+                    <%= f.hidden_field :role, value:"Teacher" %>
 
                     <p class=" border-b border-gray-500 py-3 px-5 text-sm font-semibold mr-3">Je suis </p>
                     <div class="w-full flex items-center justify-betwe m-4">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="justify-center px-5">
-                        <%= f.submit "Terminer Inscription", disable_with: 'Submiting...', class:"border bg-blue-500  font-semibold text-white text-xl rounded-md p-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline" %>
+                        <%= f.submit "Soumettez l'inscription", disable_with: 'Submiting...', class:"border bg-blue-500  font-semibold text-white text-xl rounded-md p-2 transition duration-500 ease select-none hover:text-white hover:bg-green-600 focus:outline-none focus:shadow-outline" %>
                     </div>                  
                 </div>
             </div>
