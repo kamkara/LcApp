@@ -3,12 +3,13 @@
 <!-- component -->
 <header class="min-h-screen bg-white bg-gradient-to-r from-green-200 to-blue-500 "> 
     <!-- Navigaiton Bar -->
-    <nav class="flex items-center py-8 px-14 justify-between">
+    <nav class="flex items-center py-8 px-4 justify-between">
         <div class="flex items-center">
-            <h1 class="text-xl md:text-2xl font-bold text-gray-700 ">LNCLASS EDUCATION</h1>
+            <h1 class=" md:hidden text-xl md:text-2xl font-bold text-gray-700 "> LNCLASS</h1>
+            <h1 class=" hidden md:block text-xl md:text-2xl font-bold text-gray-700 ">LNCLASS EDUCATION</h1>
         </div>
         <div class="md:flex items-center space-x-3 py-2 px-2 md:px-4 bg-green-500 text-white rounded-lg  transition-all duration-400 transform hover:text-white hover:scale-105 cursor-pointer hover:shadow-lg">
-            <%= link_to 'Se Connecter', new_user_session_path, class:"font-semibold" %>    
+            <%= link_to 'Se Connecter', new_user_session_path, class:"font-semibold " %>    
         </div>
     </nav>
     <!-- End Navigation Bar -->
@@ -20,14 +21,11 @@
             <div class="">
                 <h class="lg:text-5xl  font-bold leading-tight text-3xl">Nous aidons les élèves à obtenir de bonnes notes. </h1>
                 <p class="mt-4 text-lg font-normal ">En 2021, 9000 élèves ont obtenuent le BAC avec l'aide de la plateforme LnClass</p>
-                <div class="flex mt-10 w-80 items-center space-x-1 py-2 px-2 bg-red-600 text-white rounded-lg  transition-all duration-400 transform hover:scale-105 cursor-pointer hover:shadow-lg">
-                    <%= link_to "Inscription Tle A1, A2 et D", new_user_registration_path, class:"text-xl font-semibold" %>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-                    </span> 
+                <div class="flex mt-10 items-center w-80 space-x-1 py-2 px-1 bg-red-600 text-white rounded-lg transition-all duration-400 transform hover:scale-105 cursor-pointer hover:shadow-lg">
+                    <%= link_to "Inscription élève Tle A1, A2 et D", new_user_registration_path, class:"text-xl font-semibold" %>
+                    
                 </div>
-                <p class="text-xl underline t">Inscription professeur</p>
+                <%= link_to "Dévenir professeur partenaire", new_user_registration_path, class:"text-xl underline"  %>
             </div>
         </div>
         <!-- Box right -->
