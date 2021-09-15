@@ -12,24 +12,66 @@ class User < ApplicationRecord
   has_many :levels  
   has_many :cityareas
 
-################## VALIDATES  ###############
 
+
+  #before_commit :customizeStudentEmail
+  #before_commit :customizeTeacherEmail
+  #before_commit :password
+  #before_commit :full_name
+  #before_commit :slug
+################## VALIDATES  ###############
+validates :card_number, presence: true, if: :paid_with_card?
+
+  def paid_with_card?
+    payment_type == "card"
+  end
      ################## VALIDATES SIGN UP ###############
-     validates :first_name, :last_name, :full_name, :matricule, :email, :city, :contact, :role,  presence: true
+     validates :first_name,
+                :last_name, 
+                :full_name,
+                :email,
+                :city,
+                :contact,
+                :role,  presence: true
+validates :matricule, presence: true, if: :current_user_role?
+
+def current_user_role?
+  if self.role === 'student'
+  validates :matricule, length: {is: 9}
+  self.email = "#{self.matricule}@gmail.com" 
+  end
+end
+
+
+
+
+validates :role, inclusion: { in: %w(Student Professeur Team),
+    message: "%{value} nous ne savons pas qui vous etes" }
+
+
      validates :full_name,  length: { minimum:5 }
-     validates :contact, uniqueness: true, length: { minimum:10 }
-     validates :matricule, uniqueness: true, length: { minimum:9 }
-     
+     validates :contact,
+                uniqueness: true,
+                length: { is:10 , wrong_length: "%{count} le numéro doit etre de 10 chiffres" }
+
+     validates :matricule,
+                uniqueness: true,
+                length: { is: 9, wront_length: "%{ count} votre matricule doit etre de 9 caracteres" }
+
+   
      ################## VALIDATES SIGN UP COMPLET ###############
-     def name
-      if self.role == "student"
+     def customizeStudentEmail
+      if self.role == "Student"
        validates :school_name, :serie_bac, :status_bac, presence:true      
+       self.email = "#{self.matricule}@gmail.com"
       end
      end
 
- ############# customize fields###############"" 
-def email
-  self.email = "#{self.matricule}@gmail.com"
+ ############# customize fields ############### 
+def customizeTeacherEmail
+  if self.role == "Professeur"
+    self.email = self.matricule
+  end
 end
 
   def password
