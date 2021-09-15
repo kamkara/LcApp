@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get "team", to:'partner#team'
-  get "partenr", to:'partner#partner'
+  get "teachers", to:'partner#teachers'
   resources :courses, :city_areas, :levels, :materials 
   get 'admin/index'
   get 'admin/create'

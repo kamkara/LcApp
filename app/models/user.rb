@@ -15,19 +15,14 @@ class User < ApplicationRecord
 ################## VALIDATES  ###############
 
      ################## VALIDATES SIGN UP ###############
-     validates :first_name, :last_name, :full_name, :matricule, :email, :city, :contact, :role,  presence: true
+     validates :first_name, :last_name, :full_name, :email, :city, :contact, :role,  presence: true
      validates :full_name,  length: { minimum:5 }
      validates :contact, uniqueness: true, length: { minimum:10 }
      validates :matricule, uniqueness: true, length: { minimum:9 }
-     
-     ################## VALIDATES SIGN UP COMPLET ###############
-     def name
-      if self.role == "student"
-       validates :school_name, :serie_bac, :status_bac, presence:true      
-      end
-     end
+     validates :role, inclusion: { in: %w(student teacher team),
+                               message: "%{value} acces non identifier" }
 
- ############# customize fields###############"" 
+ ############# customize fields############### 
 def email
   self.email = "#{self.matricule}@gmail.com"
 end
@@ -40,6 +35,7 @@ end
   def full_name
     self.full_name = "#{self.first_name} #{self.last_name}"
   end
+
   def slug
     self.slug = self.full_name
   end
