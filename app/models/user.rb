@@ -19,7 +19,7 @@ class User < ApplicationRecord
      validates :full_name,  length: { minimum:5 }
      validates :contact, uniqueness: true, length: { minimum:10 }
      validates :matricule, uniqueness: true, length: { minimum:9 }
-     validates :role, inclusion: { in: %w(student teacher team),
+     validates :role, inclusion: { in: %w(Student Teacher Team),
                                message: "%{value} acces non identifier" }
 
  ############# customize fields############### 
