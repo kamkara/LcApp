@@ -1,4 +1,4 @@
-import Vue from 'vue/dist/vue.esm'
+/*import Vue from 'vue/dist/vue.esm'
 import VueResource from 'vue-resource'
 
 
@@ -90,4 +90,4 @@ document.addEventListener('turbolinks:load', () => {
     })
 
   }
-})
+})*/
